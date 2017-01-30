@@ -8,6 +8,7 @@ function start () {
   one()
   two()
   three()
+  makeVisible()
 
   // Your turn! Create a new function called `two`, then call it from here.
 }
@@ -25,7 +26,7 @@ function two () {
   var two = document.getElementById('two')
 
   // Next, we apply a new CSS class to it:
-  two.classList.toggle('green')
+  two.classList.add('green')
 }
 
 function three () {
@@ -33,7 +34,11 @@ function three () {
   var three = document.getElementById('three')
 
   // Next, we apply a new CSS class to it:
-  three.classList.toggle('red')
+  three.classList.add('red')
 }
 
-// CREATE FUNCTION makeVisible HERE
+function makeVisible () {
+  var makeVisible = document.getElementsByClassName('invisible')[0]
+
+    makeVisible.classList.add('visible')
+}
